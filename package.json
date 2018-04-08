@@ -13,6 +13,9 @@
 	"author": "Rafal Swacha",
 	"homepage": "https://github.com/DreamLab/dl-academy-waw-1#readme",
 	"dependencies": {
-		"lodash": "^4.17.5"
+		"lodash": "^4.17.5",
+		"bluebird": "^3.5.1",
+		"request": "^2.85.0",
+		"request-promise": "^4.2.2"
 	}
 }
