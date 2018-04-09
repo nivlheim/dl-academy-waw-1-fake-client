@@ -21,5 +21,3 @@ process.on('SIGINT', function() {
 	return Promise.all(_.map(clients, client => client.disconnect()))
 		.then(() => process.exit);
 });
-
-
