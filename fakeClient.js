@@ -16,6 +16,7 @@ _.forEach(FileReader.read('servers.txt'), serverAddress => {
 // Run all clients.
 _.forEach(clients, client => client.run());
 
+// Catch application stopping signal, disconnect clients and quit gracefully.
 process.on('SIGINT', function() {
 	return Promise.all(_.map(clients, client => client.disconnect()))
 		.then(() => process.exit);
