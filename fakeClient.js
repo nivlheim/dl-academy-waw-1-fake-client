@@ -16,4 +16,9 @@ _.forEach(FileReader.read('servers.txt'), serverAddress => {
 // Run all clients.
 _.forEach(clients, client => client.run());
 
+process.on('SIGINT', function() {
+	return Promise.all(_.map(clients, client => client.disconnect()))
+		.then(() => process.exit);
+});
+
 
