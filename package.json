@@ -4,6 +4,7 @@
 	"description": "Fake chat client for DreamLab Academy event.",
 	"main": "fakeClient.js",
 	"scripts": {
+		"start": "node ./fakeClient.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
