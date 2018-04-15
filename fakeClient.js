@@ -1,6 +1,6 @@
 const _ = require('lodash');
 
-const ClientHandler = require('./lib/ClientHandler');
+const Client = require('./lib/Client');
 const readFileToArray = require('./lib/readFileToArray');
 
 const CLIENTS_PER_SERVER = 3;
@@ -10,7 +10,7 @@ const clients = [];
 // Create new client handler and push it to the array.
 servers.forEach(serverAddress => {
 	for (let i = 0; i < CLIENTS_PER_SERVER; i++) {
-		clients.push(new ClientHandler(serverAddress));
+		clients.push(new Client(serverAddress));
 	}
 });
 
